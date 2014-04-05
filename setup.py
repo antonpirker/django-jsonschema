@@ -5,7 +5,7 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 PATH = os.path.dirname(os.path.abspath(__file__))
 try:
     LONG_DESC = '\n===='+open(os.path.join(PATH, 'README.rst'), 'r').read().split('====', 1)[-1]
@@ -32,7 +32,7 @@ setup(name='django-jsonschema',
       author_email = 'zbyte64@gmail.com',
       maintainer = 'Jason Kraus',
       maintainer_email = 'zbyte64@gmail.com',
-      url='http://github.com/zbyte64/django-jsonschema',
+      url='http://github.com/celerityweb/django-jsonschema',
       license='New BSD License',
       packages=find_packages(exclude=['tests']),
       test_suite='tests.runtests.runtests',
