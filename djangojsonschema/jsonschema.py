@@ -42,17 +42,17 @@ class DjangoFormToJSONSchema(object):
             target_def['type'] = 'string'
             target_def['format'] = 'uri'
         elif isinstance(field, fields.DateField):
-            target_def['type'] = 'string'
+            target_def['type'] = 'date'
             target_def['format'] = 'date'
         elif isinstance(field, fields.DateTimeField):
-            target_def['type'] = 'string'
+            target_def['type'] = 'datetime'
             target_def['format'] = 'datetime'
         elif isinstance(field, (fields.DecimalField, fields.FloatField)):
             target_def['type'] = 'number'
         elif isinstance(field, fields.IntegerField):
             target_def['type'] = 'integer'
         elif isinstance(field, fields.EmailField):
-            target_def['type'] = 'string'
+            target_def['type'] = 'email'
             target_def['format'] = 'email'
         elif isinstance(field, fields.NullBooleanField):
             target_def['type'] = 'boolean'
