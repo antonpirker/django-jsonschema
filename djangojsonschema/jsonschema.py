@@ -31,10 +31,9 @@ class DjangoFormToJSONSchema(object):
         widget = field.widget
         target_def = {
             'title': field.label or pretty_name(name),
-            'description': field.help_text,
+            'description': field.help_text,cd
         }
-        if field.required:
-            target_def['required'] = [name] #TODO this likely is not correct
+        target_def['required'] = True if field.required else False
         #TODO JSONSchemaField; include subschema and ref the type
         if isinstance(field, fields.URLField):
             target_def['type'] = 'string'
